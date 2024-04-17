@@ -23,11 +23,7 @@ connectDB();
 // app.use("/api/user", require("./routes/userRoutes"));
 
 // // Configure Multer for file uploads
-// app.get("/", (req, res) => {
-//   res.json({
-//     msg: "WELCOME TO DOCUMENT API",
-//   });
-// });
+
 // app.use(
 //   cors({
 //     origin: "*",
@@ -41,4 +37,9 @@ connectDB();
 
 app.listen(PORT, () => {
   console.log(`Server is running at PORT : ${PORT}`.bgBlue.white);
+});
+app.get("/", (req, res) => {
+  res.json({
+    msg: "WELCOME TO AUTHENTICATION API",
+  });
 });
