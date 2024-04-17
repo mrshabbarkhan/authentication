@@ -11,7 +11,6 @@ const cors = require("cors");
 const PORT = process.env.PORT || 8000;
 // DB Connection
 connectDB();
-
 // static file
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
@@ -43,3 +42,4 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`Server is running at PORT : ${PORT}`.bgBlue.white);
 });
+
